@@ -1,0 +1,37 @@
+<div class="container">
+    <h2 style="color: #9fa8da; text-align: center;">FAQs Management</h2>
+    <div class=" flex justify-content-center mb-4">
+        <p-breadcrumb class="w-full" [model]="items" />
+    </div>
+    <div class="card">
+        <div class="flex justify-content-end gap-4">
+            <p-button [routerLink]="['/faqs-management/add']"  label="Add Faqs" icon='bx bx-plus-medical'/>
+        </div>
+        <p-table
+        [value]="student"
+        showGridlines
+        [tableStyle]="{ 'min-width': '50rem' }">
+            <ng-template #header pTemplate="header">
+                <tr>
+                    <th>Roll No </th>
+                    <th>Name</th>
+                    <th>Father Name</th>
+                    <th>Result</th>
+                    <th style="text-align: center;">Action</th>
+                </tr>
+            </ng-template>
+            <ng-template #body pTemplate="body" let-student>
+                <tr>
+                    <td>{{ student.rollNumber }}</td>
+                    <td>{{ student.name }}</td>
+                    <td>{{ student.fatherName }}</td>
+                    <td>{{ student.result }}</td>
+                    <td class="flex align-items-center justify-content-center gap-3">
+                        <p-button icon="bx bxs-edit-alt" [routerLink]="['/faqs-management/edit']" [rounded]="true" severity="success" />
+                        <p-button icon="bx bx-trash" [rounded]="true" severity="danger" />
+                    </td>
+                </tr>
+            </ng-template>
+    </p-table>
+    </div>
+</div>

@@ -1,0 +1,680 @@
+<div class="videoContainer">
+    <video
+        src="../../../../assets/demo/videos/courses.mp4"
+        autoplay
+        muted
+        loop
+        type="video/mp4"
+    ></video>
+</div>
+<div class="container">
+    <h3 style="color: #9fa8da">Courses</h3>
+    <div class="card">
+        <p-splitter class="hook" [style]="{ height: '350px' }">
+            <ng-template pTemplate>
+                <div class="flex items-center justify-center h-full">
+                    <div class="w-full h-full">
+                        <h4 class="hF mt-4" style="color: #9fa8da">
+                            Microsoft Office Automation
+                        </h4>
+                        <h6 class="hF mt-0" style="color: #9fa8da">
+                            (Basic Course)
+                        </h6>
+                        <p class="pra ml-3 mr-3">
+                            At Symphony Institute, we offer comprehensive
+                            training in Microsoft Office Automation, covering
+                            tools like MS Word, Excel, PowerPoint, and Outlook.
+                            Our goal is to equip students and professionals with
+                            essential skills to enhance their career prospects
+                            and excel in their workplaces. Join us today and
+                            take the first step toward a brighter future!
+                        </p>
+                        <div class="btn">
+                            <p-button
+                                icon="pi pi-arrow-down"
+                                [rounded]="true"
+                                (click)="toggleDiv1()"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template pTemplate>
+                <div class="flex items-center justify-center h-full img">
+                    <img
+                        class="image"
+                        src="../../../../assets/demo/images/galleria/9984633.jpg"
+                        alt=""
+                    />
+                </div>
+            </ng-template>
+        </p-splitter>
+
+        <div #contentDiv1 class="collapsible-content mb-8">
+            <div class="w-100 h-100 m-5 flex">
+                <!-- <div class="card">
+                    <p-timeline class="hook-tl" [value]="events" align="left" styleClass="customized-timeline">
+                        <ng-template pTemplate="marker" let-event>
+                            <span
+                                class="flex w-8 h-8 items-center justify-center text-white rounded-full z-10 shadow-sm"
+                                [style]="{ 'background-color': event.color }">
+                                    <i [class]="event.icon"></i>
+                            </span>
+                        </ng-template>
+                        <ng-template pTemplate="content" let-event>
+                            <p-card [header]="event.status" [subheader]="event.date">
+                                <img
+                                    *ngIf="event.image"
+                                    [src]="'https://primefaces.org/cdn/primeng/images/demo/product/' + event.image"
+                                    [alt]="event.name"
+                                    width="200"
+                                    class="shadow" />
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate
+                                    neque quas!
+                                </p>
+                                <p-button label="Read more" [text]="true" />
+                            </p-card>
+                        </ng-template>
+                    </p-timeline>
+                </div> -->
+                <div class="card flex w-full">
+                    <p-timeline
+                        class="hook-tl m-4"
+                        [value]="events"
+                        align="left"
+                        styleClass="customized-timeline"
+                    >
+                        <ng-template pTemplate="marker" let-event>
+                            <span
+                                class="flex w-8 h-8 items-center justify-center text-white rounded-full z-10 shadow-sm"
+                                (click)="
+                                    updateContent(event.icon, event.content,event.sideHeading,event.heading)
+                                "
+                                [style]="{
+                                    'background-color':
+                                        event.icon === selectedIcon
+                                            ? '#9c27b0'
+                                            : event.color
+                                }"
+                            >
+                                <!-- <i [class]="event.icon"></i> -->
+                                <small style="text-align: center"
+                                    ><span [innerHTML]="event.icon"></span>
+                                </small>
+                            </span>
+                        </ng-template>
+                    </p-timeline>
+                    <div class="card w-full">
+                        <h3 style="color: #9fa8da" [innerHTML]="Heading"></h3>
+
+                        <h5 style="text-align: left !important" [innerHTML]="sideHeading">
+                            
+                        </h5>
+                        <p style="text-align: justify !important" [innerHTML]="dynamicContent">
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p-splitter class="hook" [style]="{ height: '350px' }">
+            <ng-template pTemplate>
+                <div class="flex items-center justify-center h-full img">
+                    <img
+                        class="image"
+                        src="../../../../assets/demo/images/galleria/6491419.jpg"
+                        alt=""
+                    />
+                </div>
+            </ng-template>
+            <ng-template pTemplate>
+                <div class="flex items-center justify-center h-full">
+                    <div class="w-full h-full">
+                        <h4 class="hF mt-4" style="color: #9fa8da">
+                            Front-End Web Development
+                        </h4>
+                        <h6 class="hF mt-0" style="color: #9fa8da">
+                            (Advance Course)
+                        </h6>
+                        <p class="pra ml-3 mr-3">
+                            At Symphony Institute, we provide hands-on training
+                            in Web Development, covering core technologies like
+                            HTML, CSS, and JavaScript. Our course focuses on
+                            creating modern, responsive websites to help you
+                            excel in the tech industry. Join us to turn your
+                            ideas into reality!
+                        </p>
+                        <div class="btn">
+                            <p-button
+                                icon="pi pi-arrow-down"
+                                [rounded]="true"
+                                (click)="toggleDiv2()"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </p-splitter>
+        <div #contentDiv2 class="collapsible-content mb-8">
+            <div class="w-100 h-100 m-5 flex">
+                <!-- <div class="card">
+                    <p-timeline class="hook-tl" [value]="events" align="left" styleClass="customized-timeline">
+                        <ng-template pTemplate="marker" let-event>
+                            <span
+                                class="flex w-8 h-8 items-center justify-center text-white rounded-full z-10 shadow-sm"
+                                [style]="{ 'background-color': event.color }">
+                                    <i [class]="event.icon"></i>
+                            </span>
+                        </ng-template>
+                        <ng-template pTemplate="content" let-event>
+                            <p-card [header]="event.status" [subheader]="event.date">
+                                <img
+                                    *ngIf="event.image"
+                                    [src]="'https://primefaces.org/cdn/primeng/images/demo/product/' + event.image"
+                                    [alt]="event.name"
+                                    width="200"
+                                    class="shadow" />
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate
+                                    neque quas!
+                                </p>
+                                <p-button label="Read more" [text]="true" />
+                            </p-card>
+                        </ng-template>
+                    </p-timeline>
+                </div> -->
+                <div class="card flex w-full">
+                    <p-timeline
+                        class="hook-tl m-4"
+                        [value]="events2"
+                        align="left"
+                        styleClass="customized-timeline"
+                    >
+                        <ng-template pTemplate="marker" let-event>
+                            <span
+                                class="flex w-8 h-8 items-center justify-center text-white rounded-full z-10 shadow-sm"
+                                (click)="
+                                    updateContent2(event.icon, event.content,event.sideHeading,event.heading)
+                                "
+                                [style]="{
+                                    'background-color':
+                                        event.icon === selectedIcon2
+                                            ? '#9c27b0'
+                                            : event.color
+                                }"
+                            >
+                                <!-- <i [class]="event.icon"></i> -->
+                                <small style="text-align: center"
+                                    ><span [innerHTML]="event.icon"></span>
+                                </small>
+                            </span>
+                        </ng-template>
+                    </p-timeline>
+                    <div class="card w-full">
+                        <h3 style="color: #9fa8da" [innerHTML]="Heading2"></h3>
+
+                        <h5 style="text-align: left !important" [innerHTML]="sideHeading2">
+                            
+                        </h5>
+                        <p style="text-align: justify !important" [innerHTML]="dynamicContent2">
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p-splitter class="hook" [style]="{ height: '350px' }">
+            <ng-template pTemplate>
+                <div class="flex items-center justify-center h-full">
+                    <div class="w-full h-full">
+                        <h4 class="hF mt-4" style="color: #9fa8da">
+                            Back-End Web Development
+                        </h4>
+                        <h6 class="hF mt-0" style="color: #9fa8da">
+                            (Advance Course)
+                        </h6>
+                        <p class="pra ml-3 mr-3">
+                            At Symphony Institute, we offer specialized training
+                            in Back-End Web Development, covering technologies
+                            like Node.js, PHP, and Databases. Learn to build
+                            scalable server-side applications and manage data
+                            efficiently. Join us to master backend skills and
+                            advance your tech career!
+                        </p>
+                        <div class="btn">
+                            <p-button
+                                icon="pi pi-arrow-down"
+                                [rounded]="true"
+                                (click)="toggleDiv3()"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template pTemplate>
+                <div class="flex items-center justify-center h-full img">
+                    <img
+                        class="image"
+                        src="../../../../assets/demo/images/galleria/rb_22210.png"
+                        alt=""
+                    />
+                </div>
+            </ng-template>
+        </p-splitter>
+        <div #contentDiv3 class="collapsible-content mb-8">
+            <div class="w-100 h-100 m-5 flex">
+                <!-- <div class="card">
+                    <p-timeline class="hook-tl" [value]="events" align="left" styleClass="customized-timeline">
+                        <ng-template pTemplate="marker" let-event>
+                            <span
+                                class="flex w-8 h-8 items-center justify-center text-white rounded-full z-10 shadow-sm"
+                                [style]="{ 'background-color': event.color }">
+                                    <i [class]="event.icon"></i>
+                            </span>
+                        </ng-template>
+                        <ng-template pTemplate="content" let-event>
+                            <p-card [header]="event.status" [subheader]="event.date">
+                                <img
+                                    *ngIf="event.image"
+                                    [src]="'https://primefaces.org/cdn/primeng/images/demo/product/' + event.image"
+                                    [alt]="event.name"
+                                    width="200"
+                                    class="shadow" />
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate
+                                    neque quas!
+                                </p>
+                                <p-button label="Read more" [text]="true" />
+                            </p-card>
+                        </ng-template>
+                    </p-timeline>
+                </div> -->
+                <div class="card flex w-full">
+                    <p-timeline
+                        class="hook-tl m-4"
+                        [value]="events3"
+                        align="left"
+                        styleClass="customized-timeline"
+                    >
+                        <ng-template pTemplate="marker" let-event>
+                            <span
+                                class="flex w-8 h-8 items-center justify-center text-white rounded-full z-10 shadow-sm"
+                                (click)="
+                                    updateContent3(event.icon, event.content,event.sideHeading,event.heading)
+                                "
+                                [style]="{
+                                    'background-color':
+                                        event.icon === selectedIcon3
+                                            ? '#9c27b0'
+                                            : event.color
+                                }"
+                            >
+                                <!-- <i [class]="event.icon"></i> -->
+                                <small style="text-align: center"
+                                    ><span [innerHTML]="event.icon"></span>
+                                </small>
+                            </span>
+                        </ng-template>
+                    </p-timeline>
+                    <div class="card w-full">
+                        <h3 style="color: #9fa8da" [innerHTML]="Heading3"></h3>
+
+                        <h5 style="text-align: left !important" [innerHTML]="sideHeading3">
+                            
+                        </h5>
+                        <p style="text-align: justify !important" [innerHTML]="dynamicContent3">
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p-splitter class="hook" [style]="{ height: '350px' }">
+            <ng-template pTemplate>
+                <div class="flex items-center justify-center h-full img">
+                    <img
+                        class="image"
+                        src="../../../../assets/demo/images/galleria/rb_984.png"
+                        alt=""
+                    />
+                </div>
+            </ng-template>
+            <ng-template pTemplate>
+                <div class="flex items-center justify-center h-full">
+                    <div class="w-full h-full">
+                        <h4 class="hF mt-4" style="color: #9fa8da">
+                            Mobile Application Development
+                        </h4>
+                        <h6 class="hF mt-0" style="color: #9fa8da">
+                            (Advance Course)
+                        </h6>
+                        <p class="pra ml-3 mr-3">
+                            At Symphony Institute, we provide expert training in
+                            Mobile Application Development, focusing on
+                            technologies like Flutter, React Native, and Android
+                            Studio. Learn to create modern, responsive apps for
+                            Android and iOS platforms. Join us to turn your
+                            ideas into powerful mobile applications!
+                        </p>
+                        <div class="btn">
+                            <p-button
+                                icon="pi pi-arrow-down"
+                                [rounded]="true"
+                                (click)="toggleDiv4()"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </p-splitter>
+        <div id="new-courses" #contentDiv4 class="collapsible-content mb-8">
+            <div class="w-100 h-100 m-5 flex">
+                <!-- <div class="card">
+                    <p-timeline class="hook-tl" [value]="events" align="left" styleClass="customized-timeline">
+                        <ng-template pTemplate="marker" let-event>
+                            <span
+                                class="flex w-8 h-8 items-center justify-center text-white rounded-full z-10 shadow-sm"
+                                [style]="{ 'background-color': event.color }">
+                                    <i [class]="event.icon"></i>
+                            </span>
+                        </ng-template>
+                        <ng-template pTemplate="content" let-event>
+                            <p-card [header]="event.status" [subheader]="event.date">
+                                <img
+                                    *ngIf="event.image"
+                                    [src]="'https://primefaces.org/cdn/primeng/images/demo/product/' + event.image"
+                                    [alt]="event.name"
+                                    width="200"
+                                    class="shadow" />
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate
+                                    neque quas!
+                                </p>
+                                <p-button label="Read more" [text]="true" />
+                            </p-card>
+                        </ng-template>
+                    </p-timeline>
+                </div> -->
+                <div class="card flex w-full">
+                    <p-timeline
+                        class="hook-tl m-4"
+                        [value]="events4"
+                        align="left"
+                        styleClass="customized-timeline"
+                    >
+                        <ng-template pTemplate="marker" let-event>
+                            <span
+                                class="flex w-8 h-8 items-center justify-center text-white rounded-full z-10 shadow-sm"
+                                (click)="
+                                    updateContent4(event.icon, event.content,event.sideHeading,event.heading)
+                                "
+                                [style]="{
+                                    'background-color':
+                                        event.icon === selectedIcon4
+                                            ? '#9c27b0'
+                                            : event.color
+                                }"
+                            >
+                                <!-- <i [class]="event.icon"></i> -->
+                                <small style="text-align: center"
+                                    ><span [innerHTML]="event.icon"></span>
+                                </small>
+                            </span>
+                        </ng-template>
+                    </p-timeline>
+                    <div class="card w-full">
+                        <h3 style="color: #9fa8da" [innerHTML]="Heading4"></h3>
+
+                        <h5 style="text-align: left !important" [innerHTML]="sideHeading4">
+                            
+                        </h5>
+                        <p style="text-align: justify !important" [innerHTML]="dynamicContent4">
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p-splitter  class="hook" [style]="{ height: '350px' }">
+            <ng-template pTemplate>
+                <div class="flex items-center justify-center h-full">
+                    <div class="w-full h-full">
+                        <h4 class="hF mt-4" style="color: #9fa8da">
+                            New Courses
+                        </h4>
+                        <p class="pra ml-3 mr-3">
+                            At Symphony Institute, we offer specialized training
+                            in Back-End Web Development, covering technologies
+                            like Node.js, PHP, and Databases. Learn to build
+                            scalable server-side applications and manage data
+                            efficiently. Join us to master backend skills and
+                            advance your tech career!
+                        </p>
+                        <div class="btn">
+                            <p-button
+                                icon="pi pi-arrow-down"
+                                [rounded]="true"
+                                (click)="toggleDiv5()"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template pTemplate>
+                <div class="flex items-center justify-center h-full img">
+                    <img
+                        class="image"
+                        src="../../../../assets/demo/images/galleria/rb_38796.png"
+                        alt=""
+                    />
+                </div>
+            </ng-template>
+        </p-splitter>
+        <div id="short-courses" #contentDiv5 class="collapsible-content mb-8">
+            <div class="w-100 h-100 m-5 flex">
+                
+                <div class="card flex w-full">
+                    <p-timeline
+                        class="hook-tl m-4"
+                        [value]="events5"
+                        align="left"
+                        styleClass="customized-timeline"
+                    >
+                        <ng-template pTemplate="marker" let-event>
+                            <span
+                                class="flex w-8 h-8 items-center justify-center text-white rounded-full z-10 shadow-sm"
+                                (click)="
+                                    updateContent5(event.icon, event.content,event.sideHeading,event.heading)
+                                "
+                                [style]="{
+                                    'background-color':
+                                        event.icon === selectedIcon5
+                                            ? '#9c27b0'
+                                            : event.color
+                                }"
+                            >
+                                <!-- <i [class]="event.icon"></i> -->
+                                <small style="text-align: center"
+                                    ><span [innerHTML]="event.icon"></span>
+                                </small>
+                            </span>
+                        </ng-template>
+                    </p-timeline>
+                    <div class="card w-full">
+                        <h3 style="color: #9fa8da" [innerHTML]="Heading5"></h3>
+
+                        <h5 style="text-align: left !important" [innerHTML]="sideHeading5">
+                            
+                        </h5>
+                        <p style="text-align: justify !important" [innerHTML]="dynamicContent5">
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p-splitter class="hook" [style]="{ height: '350px' }">
+            <ng-template pTemplate>
+                <div class="flex items-center justify-center h-full img">
+                    <img
+                        class="image"
+                        src="../../../../assets/demo/images/galleria/rb_2149327718.png"
+                        alt=""
+                    />
+                </div>
+            </ng-template>
+
+
+
+        <ng-template pTemplate>
+                <div class="flex items-center justify-center h-full">
+                    <div class="w-full h-full">
+                        <h4 class="hF mt-4" style="color: #9fa8da">
+                            Short Courses
+                        </h4>
+                        <h6 class="hF mt-0" style="color: #9fa8da">
+                            (Basic Course)
+                        </h6>
+                        <p class="pra ml-3 mr-3">
+                            At Symphony Institute, we provide expert training in
+                            Mobile Application Development, focusing on
+                            technologies like Flutter, React Native, and Android
+                            Studio. Learn to create modern, responsive apps for
+                            Android and iOS platforms. Join us to turn your
+                            ideas into powerful mobile applications!
+                        </p>
+                        <div class="btn">
+                            <p-button
+                                icon="pi pi-arrow-down"
+                                [rounded]="true"
+                                (click)="toggleDiv6()"
+                            />
+                        </div>
+                    </div>
+                </div>
+        </ng-template>
+        </p-splitter>
+        <div #contentDiv6 id="lab" class="collapsible-content mb-8">
+            <div class="w-100 h-100 m-5 flex">
+                
+                <div class="card flex w-full">
+                    <p-timeline
+                        class="hook-tl m-4"
+                        [value]="events6"
+                        align="left"
+                        styleClass="customized-timeline"
+                    >
+                        <ng-template pTemplate="marker" let-event>
+                            <span
+                                class="flex w-8 h-8 items-center justify-center text-white rounded-full z-10 shadow-sm"
+                                (click)="
+                                    updateContent6(event.icon, event.content,event.sideHeading,event.heading)
+                                "
+                                [style]="{
+                                    'background-color':
+                                        event.icon === selectedIcon6
+                                            ? '#9c27b0'
+                                            : event.color
+                                }"
+                            >
+                                <!-- <i [class]="event.icon"></i> -->
+                                <small style="text-align: center"
+                                    ><span [innerHTML]="event.icon"></span>
+                                </small>
+                            </span>
+                        </ng-template>
+                    </p-timeline>
+                    <div class="card w-full">
+                        <h3 style="color: #9fa8da" [innerHTML]="Heading6"></h3>
+
+                        <h5 style="text-align: left !important" [innerHTML]="sideHeading6">
+                            
+                        </h5>
+                        <p style="text-align: justify !important" [innerHTML]="dynamicContent6">
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p-splitter  class="hook" [style]="{ height: '300px' }">
+            <ng-template pTemplate>
+                <div class="flex items-center justify-center h-full">
+                    <div class="w-full h-full">
+                        <h4 class="hF mt-4" style="color: #9fa8da">
+                            Lab Session
+                        </h4>
+                        <p class="pra ml-3 mr-3">
+                            Symphony Limited offers practical training in Networking, Programming, Database Management, Cybersecurity, and Cloud Computing, equipping students with hands-on skills for industry readiness. Students gain expertise in tools like Java, Python, SQL Server, and platforms like AWS and Azure.
+                        </p>
+                        <div class="btn">
+                            <p-button
+                                icon="pi pi-arrow-down"
+                                [rounded]="true"
+                                (click)="toggleDiv7()"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template pTemplate>
+                <div class="flex items-center justify-center h-full img">
+                    <img
+                        class="image"
+                        src="../../../../assets/demo/images/galleria/rb_39805.png"
+                        alt=""
+                    />
+                </div>
+            </ng-template>
+        </p-splitter>
+        <div id="short-courses" #contentDiv7 class="collapsible-content mb-8">
+            <div class="w-100 h-100 m-5 flex">
+                
+                <div class="card flex w-full">
+                    <p-timeline
+                        class="hook-tl m-4"
+                        [value]="events7"
+                        align="left"
+                        styleClass="customized-timeline"
+                    >
+                        <ng-template pTemplate="marker" let-event>
+                            <span
+                                class="flex w-8 h-8 items-center justify-center text-white rounded-full z-10 shadow-sm"
+                                (click)="
+                                    updateContent7(event.icon, event.content,event.sideHeading,event.heading)
+                                "
+                                [style]="{
+                                    'background-color':
+                                        event.icon === selectedIcon7
+                                            ? '#9c27b0'
+                                            : event.color
+                                }"
+                            >
+                                <!-- <i [class]="event.icon"></i> -->
+                                <small style="text-align: center"
+                                    ><span [innerHTML]="event.icon"></span>
+                                </small>
+                            </span>
+                        </ng-template>
+                    </p-timeline>
+                    <div class="card w-full">
+                        <h3 style="color: #9fa8da" [innerHTML]="Heading7"></h3>
+
+                        <h5 style="text-align: left !important" [innerHTML]="sideHeading7">
+                            
+                        </h5>
+                        <p style="text-align: justify !important" [innerHTML]="dynamicContent7">
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

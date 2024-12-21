@@ -1,0 +1,122 @@
+<div class="container">
+    <h2 style="color: #9fa8da; text-align: center;">Edit About Content</h2>
+    
+    <div class="grid">
+        <div class="col-12 flex justify-content-center mt-3">
+            <div class="card w50 p-fluid">
+                <div class="form-logo mb-5 flex align-items-center justify-content-center">
+                    <img src="assets/layout/images/logo-white.svg" alt="Logo" height="20" class="mr-2"><span>SYMPHONY</span>
+                </div>
+                <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm.value, myForm)">
+                <div class="grid">
+                    <div class="col-12 md:col-6">
+                        <div class="field w-full">
+                            <label htmlFor="name1">First Name</label>
+                            <input
+                                class="w-full heig"
+                                pInputText
+                                id="name1"
+                                type="text"
+                                ngModel name="firstName" #fName="ngModel"
+                            />
+                            <span style="color: red; float: left;"></span>
+                        </div>
+                    </div>
+                    <div class="col-12 md:col-6">
+                        <div class="field w-full">
+                            <label htmlFor="name1">Last Name</label>
+                            <input
+                                class="w-full heig"
+                                pInputText
+                                id="name1"
+                                type="text"
+                                ngModel name="lastName" #lName="ngModel"
+                            />
+                            <span style="color: red; float: left;"></span>
+                        </div>
+                    </div>
+                    <div class="col-12 md:col-6">
+                        <div class="field w-full">
+                            <label htmlFor="name1">Father Name</label>
+                            <input
+                                class="w-full heig"
+                                pInputText
+                                id="name1"
+                                type="text"
+                                ngModel name="fatherName" #fatherName="ngModel"
+                            />
+                        </div>
+                        <span style="color: red; float: left;"></span>
+                    </div>
+                    <div class="col-12 md:col-6">
+                        <div class="field w-full">
+                            <label htmlFor="name1">Email</label>
+                            <input
+                                class="w-full heig"
+                                pInputText
+                                id="name1"
+                                type="text"
+                                ngModel name="email" #email="ngModel"
+                            />
+                            <span style="color: red; float: left;"></span>
+                        </div>
+                    </div>
+                    <div class="col-12 md:col-6">
+                        <div class="field w-full">
+                            <label htmlFor="name1">Age</label>
+                            <input
+                                class="w-full heig"
+                                pInputText
+                                id="name1"
+                                type="number"
+                                required 
+                                ngModel name="age" #age="ngModel"
+                            />
+                            <span style="color: red; float: left;"></span>
+                        </div>
+                    </div>
+                    <div class="col-12 md:col-6">
+                        <div class="field w-full">
+                            <label htmlFor="name1">Mobile No</label>
+                            <input
+                                class="w-full heig"
+                                pInputText
+                                id="name1"
+                                type="text"
+                                ngModel name="mobile" #moble="ngModel"
+                            />
+                            <span style="color: red; float: left;"></span>
+                        </div>
+                    </div>
+                    <div class="col-12 md:col-6">
+                        <div class="field w-full">
+                            <label htmlFor="name1">Address</label>
+                            <input
+                                class="w-full heig"
+                                pInputText
+                                id="name1"
+                                type="text"
+                                ngModel name="address" #address="ngModel"
+                            />
+                            <span style="color: red; float: left;"></span>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="col-12">
+                        <button
+                        class="btn"
+                        pButton
+                        pRipple
+                        label="Edit About Content"
+                        icon='bx bxs-edit-alt'
+                        iconPos="right"
+                    ></button>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,52 @@
+<div class="container">
+
+    <h2 style="letter-spacing: 0.4rem; color: #9fa8da; text-align: center">
+        Claim Certification
+    </h2>
+    <div class="card">
+        <h4>Get Certificate By Roll No:</h4>
+        <div class="field w-full">
+            <label htmlFor="name1">Roll No:</label>
+            <input
+                class="w-full heig"
+                pInputText
+                id="name1"
+                type="number"
+                required 
+                name="age"
+                placeholder="Enter Your Roll Number"
+            />
+            <span style="color: red; float: left;"></span>
+        </div>
+        <button
+                        class="btn"
+                        pButton
+                        pRipple
+                        label="Search"
+                        icon="pi pi-search"
+                        iconPos="right"
+                    ></button>
+                    <p-table
+        [value]="student"
+        showGridlines
+        [tableStyle]="{ 'min-width': '50rem' }">
+            <ng-template #header pTemplate="header">
+                <tr>
+                    <th>Roll No </th>
+                    <th>Name</th>
+                    <th>Father Name</th>
+                    <th>Action</th>
+                </tr>
+            </ng-template>
+            <ng-template #body pTemplate="body" let-student>
+                <tr>
+                    <td>{{ student.rollNumber }}</td>
+                    <td>{{ student.name }}</td>
+                    <td>{{ student.fatherName }}</td>
+                    <td><p-button icon="bx bxs-download" [rounded]="true" severity="primary" pTooltip="Download Certificate" /></td>
+
+                </tr>
+            </ng-template>
+    </p-table>
+    </div>
+</div>

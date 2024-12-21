@@ -1,0 +1,89 @@
+<div class="container">
+    <h2 style="letter-spacing: 0.4rem; color: #9fa8da; text-align: center">
+        Date Of Entry Test
+    </h2>
+    <div class="card">
+        <h4>Admission Form Will Be Available On This Date: 25-02-2025</h4>
+    </div>
+    
+    <div class="card" (click)="navigateToForm()"style="cursor: pointer;">
+        <h4>Click Here To Fill Admission Form &nbsp;&nbsp;&nbsp;<i class='bx bxs-edit' style="vertical-align: middle; font-size: 1.8rem;"></i></h4>
+    </div>
+
+    <div class="card">
+        <h4>Next Admission Date Coming Soon.... &nbsp;&nbsp;&nbsp;<i class='bx bxs-hourglass' style="vertical-align: middle; font-size: 1.8rem;"></i></h4>
+    </div>
+
+    <div class="card">
+        <h4>Download Admit Card</h4>
+        <div class="field w-full">
+            <label htmlFor="name1">Form No:</label>
+            <input
+                class="w-full heig"
+                pInputText
+                id="name1"
+                type="number"
+                required 
+                name="age"
+                placeholder="Enter Your Form Number"
+            />
+            <span style="color: red; float: left;"></span>
+        </div>
+        <button
+                        class="btn"
+                        pButton
+                        pRipple
+                        label="Download Admit Card"
+                        icon="pi pi-download"
+                        iconPos="right"
+                        (click)="downloadAdmitCard({})"
+                    ></button>
+    </div>
+
+    <div class="card">
+        <h4>View Result</h4>
+        <div class="field w-full">
+            <label htmlFor="name1">Roll No:</label>
+            <input
+                class="w-full heig"
+                pInputText
+                id="name1"
+                type="number"
+                required 
+                name="age"
+                placeholder="Enter Your Roll Number"
+            />
+            <span style="color: red; float: left;"></span>
+        </div>
+        <button
+                        class="btn"
+                        pButton
+                        pRipple
+                        label="Search"
+                        icon="pi pi-search"
+                        iconPos="right"
+                    ></button>
+                    <p-table
+        [value]="student"
+        showGridlines
+        [tableStyle]="{ 'min-width': '50rem' }">
+            <ng-template #header pTemplate="header">
+                <tr>
+                    <th>Roll No </th>
+                    <th>Name</th>
+                    <th>Father Name</th>
+                    <th>Result</th>
+                </tr>
+            </ng-template>
+            <ng-template #body pTemplate="body" let-student>
+                <tr>
+                    <td>{{ student.rollNumber }}</td>
+                    <td>{{ student.name }}</td>
+                    <td>{{ student.fatherName }}</td>
+                    <td>{{ student.result }}</td>
+                </tr>
+            </ng-template>
+    </p-table>
+    </div>
+</div>
+    

@@ -1,0 +1,34 @@
+.container {
+    background-color: #262626;
+    width: 100%;
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+}
+.cont{
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 1rem;
+    padding: 6px 2px;
+}
+.cont h6, 
+.cont p, 
+.cont p i {
+    color: #fff; /* Default text color */
+    transition: color 0.3s ease; /* Smooth color change */
+}
+
+/* Hover effect */
+.cont:hover {
+    border-color: #9fa8da; /* Change border color */
+    cursor: pointer;
+}
+
+.cont:hover h6,
+.cont:hover p,
+.cont:hover p i {
+    color: #9fa8da; /* Change text color */
+}
+
+h6{
+    margin: 0;
+}

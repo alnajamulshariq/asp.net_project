@@ -1,0 +1,130 @@
+<div class="container">
+    <h3 style="color: #9fa8da">Courses & Labs Fees</h3>
+    <div class="grid">
+        <div class="col-12">
+            <div class="card">
+                <h4>Course Fees and Policies at Symphony Institute</h4>
+                <h5 class="aLeft">1. Basic Course:</h5>
+                <ul class="aLeft">
+                    <li>Fee: $4275</li>
+                    <li>Duration: 4 Months</li>
+                    <li>Includes foundational training and certification preparation.
+                    </li>
+                </ul>
+
+                <h5 class="aLeft">2. Advance Course:</h5>
+                <ul class="aLeft">
+                    <li>Fee: $6000</li>
+                    <li>Duration: 6 Months</li>
+                    <li>For students with prior knowledge, directly covering advanced topics.
+                    </li>
+                </ul>
+
+                <h5 class="aLeft">3. Labs Practice Sessions (Optional):</h5>
+                <ul class="aLeft">
+                    <li>Fee: $1000 (if opted during registration).</li>
+                    <li>Fee: $1500 (if opted after course completion).</li>
+                    <li>Provides additional lab hours and faculty guidance post-course.
+                    </li>
+                </ul>
+
+                <h5 class="aLeft">4. Entrance Examination Fee:</h5>
+                <ul class="aLeft">
+                    <li>Fee: $100</li>
+                </ul>
+
+                <h4>Fee Policies</h4>
+
+                <h5 class="aLeft">1. Payment Deadlines</h5>
+                <ul class="aLeft">
+                    <li>Course fees must be paid at least 1 day before the class commencement.</li>
+                    <li>Entrance exam fees must be paid during the application process.</li>
+                </ul>
+
+                <h5 class="aLeft">2. Method of Payment:</h5>
+                <ul class="aLeft">
+                    <li>Payments can be made via challan.</li>
+                    <li>Online payment methods are expected to be introduced soon.</li>
+                </ul>
+
+                <h5 class="aLeft">3. Refunds and Cancellations:</h5>
+                <ul class="aLeft">
+                    <li>No refunds will be issued once the course or lab sessions have commenced.</li>
+                    <li>In case of cancellation before the course starts, the refund will be processed after deducting administrative charges.</li>
+                </ul>
+
+                <h5 class="aLeft">4. Lab Access Charges:</h5>
+                <ul class="aLeft">
+                    <li>Lab facilities during the course duration are free.</li>
+                    <li>Post-course lab usage is chargeable as per the above-mentioned fees.</li>
+                </ul>
+
+                <h5 class="aLeft">5. Fee Revisions:</h5>
+                <ul class="aLeft">
+                    <li>All fees are subject to periodic revision and will be updated on the official portal by the admin.</li>
+                </ul>
+
+                <h4>By adhering to these policies, Symphony Limited ensures transparency and smooth financial management for its students.</h4>
+
+            </div>
+        </div>
+    </div>
+    <div class="grid">
+        <div class="col-6">
+            <div class="card">
+                <h4>Basic Course</h4>
+                <button
+                        class="btn"
+                        pButton
+                        pRipple
+                        label="Download Challan"
+                        (click)="downloadBasicCourseChallan()"
+                        icon="pi pi-download"
+                        iconPos="right"
+                    ></button>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="card">
+                <h4>Advance Course</h4>
+                <button
+                        class="btn"
+                        pButton
+                        pRipple
+                        label="Download Challan"
+                        (click)="downloadAdvanceCourseChallan()"
+                        icon="pi pi-download"
+                        iconPos="right"
+                    ></button>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="card">
+                <h4>Labs</h4>
+                <button
+                        class="btn"
+                        pButton
+                        pRipple
+                        label="Download Challan"
+                        (click)="downloadLabFeeChallan()"
+                        icon="pi pi-download"
+                        iconPos="right"
+                    ></button>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="card">
+                <h4>Advance Course With Labs</h4>
+                <button
+                        class="btn"
+                        pButton
+                        pRipple
+                        label="Download Challan"
+                        (click)="downloadLabFeeWithCourseChallan()"
+                        icon="pi pi-download"
+                        iconPos="right"
+                    ></button>
+            </div>
+        </div>
+    </div>
+</div>
